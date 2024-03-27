@@ -7,12 +7,13 @@ type AddressMap = { [chainId: number]: string }
 
 export const UNI_ADDRESS: AddressMap = constructSameAddressMap('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', false)
 export const MULTICALL2_ADDRESSES: AddressMap = {
-  ...constructSameAddressMap('0x5BA1e12693Dc8F9c48aAD8770482f4739bEeD696', false),
+  ...constructSameAddressMap('0x43cDB3cb3cD47727B0C25f01bcB27fa822668544', false),
   [SupportedChainId.ARBITRUM_ONE]: '0x021CeAC7e681dBCE9b5039d2535ED97590eB395c',
 }
-export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(V2_FACTORY_ADDRESS, false)
+// prettier-ignore
+export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap('0x7E0987E5b3a30e3f2828572Bb659A548460a3003', false)
 export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap(
-  '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
+  '0xC532a74256D3Db42D0Bf7a0400fEFDbad7694008',
   false
 )
 

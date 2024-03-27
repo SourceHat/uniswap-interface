@@ -5,6 +5,7 @@ export enum SupportedChainId {
   GOERLI = 5,
   KOVAN = 42,
   ARBITRUM_ONE = 42161,
+  SEPOLIA = 11155111,
 }
 
 export const NETWORK_LABELS: { [chainId in SupportedChainId | number]: string } = {
@@ -14,4 +15,5 @@ export const NETWORK_LABELS: { [chainId in SupportedChainId | number]: string } 
   [SupportedChainId.GOERLI]: 'Görli',
   [SupportedChainId.KOVAN]: 'Kovan',
   [SupportedChainId.ARBITRUM_ONE]: 'Arbitrum One',
+  [SupportedChainId.SEPOLIA]: 'Sepolia',
 }

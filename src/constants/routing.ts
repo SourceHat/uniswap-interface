@@ -56,6 +56,7 @@ const WETH_ONLY: ChainTokenList = {
   [SupportedChainId.GOERLI]: [WETH9_EXTENDED[SupportedChainId.GOERLI]],
   [SupportedChainId.KOVAN]: [WETH9_EXTENDED[SupportedChainId.KOVAN]],
   [SupportedChainId.ARBITRUM_ONE]: [WETH9_EXTENDED[SupportedChainId.ARBITRUM_ONE]],
+  [SupportedChainId.SEPOLIA]: [WETH9_EXTENDED[SupportedChainId.SEPOLIA]],
 }
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
@@ -98,6 +99,7 @@ export const COMMON_BASES: ChainCurrencyList = {
   [4]: [ExtendedEther.onChain(4), WETH9_EXTENDED[4]],
   [5]: [ExtendedEther.onChain(5), WETH9_EXTENDED[5]],
   [42]: [ExtendedEther.onChain(42), WETH9_EXTENDED[42]],
+  [11155111]: [ExtendedEther.onChain(11155111), WETH9_EXTENDED[11155111]],
   [SupportedChainId.ARBITRUM_ONE]: [
     ExtendedEther.onChain(SupportedChainId.ARBITRUM_ONE),
     WETH9_EXTENDED[SupportedChainId.ARBITRUM_ONE],
