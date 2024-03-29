@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import GoogleAnalyticsReporter from '../components/analytics/GoogleAnalyticsReporter'
 import AddressClaimModal from '../components/claim/AddressClaimModal'
+import Banner from '../components/Banner'
 import Header from '../components/Header'
 import Polling from '../components/Header/Polling'
 import Popups from '../components/Popups'
@@ -49,7 +50,7 @@ const BodyWrapper = styled.div`
 `
 
 const HeaderWrapper = styled.div`
-  ${({ theme }) => theme.flexRowNoWrap}
+  ${({ theme }) => theme.flexColumnNoWrap}
   width: 100%;
   justify-content: space-between;
   position: fixed;
@@ -75,6 +76,7 @@ export default function App() {
       <Route component={ApeModeQueryParamReader} />
       <AppWrapper>
         <HeaderWrapper>
+          <Banner position={"top"}/>
           <Header />
         </HeaderWrapper>
         <BodyWrapper>
@@ -116,11 +118,11 @@ export default function App() {
 
               <Route exact strict path="/migrate/v2" component={MigrateV2} />
               <Route exact strict path="/migrate/v2/:address" component={MigrateV2Pair} />
-              
               <Route component={RedirectPathToSwapOnly} />
             </Switch>
           </Web3ReactManager>
           <Marginer />
+          <Banner position={"bottom"}/>
         </BodyWrapper>
       </AppWrapper>
     </ErrorBoundary>
