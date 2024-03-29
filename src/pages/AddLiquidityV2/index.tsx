@@ -179,11 +179,6 @@ export default function AddLiquidity({
       value = null
     }
 
-    console.log(...args)
-    console.log(router)
-    console.log(method)
-    console.log(estimate)
-
     setAttemptingTxn(true)
     await estimate(...args, value ? { value } : {})
       .then((estimatedGasLimit) =>
@@ -192,8 +187,6 @@ export default function AddLiquidity({
           gasLimit: calculateGasMargin(estimatedGasLimit),
         }).then((response) => {
           setAttemptingTxn(false)
-
-          console.log("past estimate gas")
 
           addTransaction(response, {
             summary: t`Add ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)} ${
