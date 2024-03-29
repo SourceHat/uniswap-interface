@@ -28,7 +28,8 @@ const NETWORK_URLS: {
   [SupportedChainId.GOERLI]: `https://goerli.infura.io/v3/${INFURA_KEY}`,
   [SupportedChainId.KOVAN]: `https://kovan.infura.io/v3/${INFURA_KEY}`,
   [SupportedChainId.ARBITRUM_ONE]: `https://arb1.arbitrum.io/rpc`,
-  [SupportedChainId.SEPOLIA]: `https://sepolia.publicgoods.network`,
+  [SupportedChainId.SEPOLIA]: `https://sepolia.gateway.tenderly.co`,
+  [SupportedChainId.BASE_SEPOLIA]: `https://sepolia.base.org`,
 }
 
 const SUPPORTED_CHAIN_IDS: SupportedChainId[] = [
@@ -39,6 +40,7 @@ const SUPPORTED_CHAIN_IDS: SupportedChainId[] = [
   SupportedChainId.ROPSTEN,
   SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.SEPOLIA,
+  SupportedChainId.BASE_SEPOLIA,
 ]
 
 export const network = new NetworkConnector({

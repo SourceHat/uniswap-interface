@@ -1,11 +1,13 @@
 import { Percent, Token } from '@uniswap/sdk-core'
-import { computePairAddress, Pair } from '@uniswap/v2-sdk'
+import { Pair } from '@uniswap/v2-sdk'
 import JSBI from 'jsbi'
 import flatMap from 'lodash.flatmap'
 import { useCallback, useMemo } from 'react'
 import { shallowEqual } from 'react-redux'
 import { V2_FACTORY_ADDRESSES } from '../../constants/addresses'
 import { BASES_TO_TRACK_LIQUIDITY_FOR, PINNED_PAIRS } from '../../constants/routing'
+
+import { computePairAddress} from '../../computePair'
 
 import { useActiveWeb3React } from '../../hooks/web3'
 import { useAllTokens } from '../../hooks/Tokens'
@@ -267,7 +269,7 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
 
   return new Token(
     tokenA.chainId,
-    computePairAddress({ factoryAddress: V2_FACTORY_ADDRESSES[tokenA.chainId], tokenA, tokenB }),
+    computePairAddress({ factoryAddress: V2_FACTORY_ADDRESSES[tokenA.chainId], tokenA, tokenB, chainId: tokenA.chainId }),
     18,
     'UNI-V2',
     'Uniswap V2'

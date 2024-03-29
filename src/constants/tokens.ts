@@ -30,6 +30,7 @@ export const UNI: { [chainId: number]: Token } = {
   [SupportedChainId.GOERLI]: new Token(SupportedChainId.GOERLI, UNI_ADDRESS[5], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.KOVAN]: new Token(SupportedChainId.KOVAN, UNI_ADDRESS[42], 18, 'UNI', 'Uniswap'),
   [SupportedChainId.SEPOLIA]: new Token(SupportedChainId.SEPOLIA, UNI_ADDRESS[11155111], 18, 'UNI', 'Uniswap'),
+  [SupportedChainId.BASE_SEPOLIA]: new Token(SupportedChainId.BASE_SEPOLIA, UNI_ADDRESS[84532], 18, 'UNI', 'Uniswap'),
 }
 export const WETH9_EXTENDED: { [chainId: number]: Token } = {
   ...WETH9,
@@ -43,6 +44,13 @@ export const WETH9_EXTENDED: { [chainId: number]: Token } = {
   [SupportedChainId.SEPOLIA]: new Token(
     SupportedChainId.SEPOLIA,
     '0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9',
+    18,
+    'WETH',
+    'Wrapped Ether'
+  ),
+  [SupportedChainId.BASE_SEPOLIA]: new Token(
+    SupportedChainId.BASE_SEPOLIA,
+    '0x24fe7807089e321395172633aA9c4bBa4Ac4a357',
     18,
     'WETH',
     'Wrapped Ether'
