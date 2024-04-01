@@ -51,11 +51,6 @@ const mAssetsAdditionalBases: { [tokenAddress: string]: Token[] } = {
 }
 const WETH_ONLY: ChainTokenList = {
   [SupportedChainId.MAINNET]: [WETH9_EXTENDED[SupportedChainId.MAINNET]],
-  [SupportedChainId.ROPSTEN]: [WETH9_EXTENDED[SupportedChainId.ROPSTEN]],
-  [SupportedChainId.RINKEBY]: [WETH9_EXTENDED[SupportedChainId.RINKEBY]],
-  [SupportedChainId.GOERLI]: [WETH9_EXTENDED[SupportedChainId.GOERLI]],
-  [SupportedChainId.KOVAN]: [WETH9_EXTENDED[SupportedChainId.KOVAN]],
-  [SupportedChainId.ARBITRUM_ONE]: [WETH9_EXTENDED[SupportedChainId.ARBITRUM_ONE]],
   [SupportedChainId.SEPOLIA]: [WETH9_EXTENDED[SupportedChainId.SEPOLIA]],
   [SupportedChainId.BASE_SEPOLIA]: [WETH9_EXTENDED[SupportedChainId.BASE_SEPOLIA]],
 }
@@ -96,16 +91,8 @@ export const CUSTOM_BASES: { [chainId: number]: { [tokenAddress: string]: Token[
  */
 export const COMMON_BASES: ChainCurrencyList = {
   [1]: [ExtendedEther.onChain(1), DAI, USDC, USDT, WBTC, WETH9_EXTENDED[1]],
-  [3]: [ExtendedEther.onChain(3), WETH9_EXTENDED[3]],
-  [4]: [ExtendedEther.onChain(4), WETH9_EXTENDED[4]],
-  [5]: [ExtendedEther.onChain(5), WETH9_EXTENDED[5]],
-  [42]: [ExtendedEther.onChain(42), WETH9_EXTENDED[42]],
   [11155111]: [ExtendedEther.onChain(11155111), WETH9_EXTENDED[11155111]],
   [84532]: [ExtendedEther.onChain(84532), WETH9_EXTENDED[84532]],
-  [SupportedChainId.ARBITRUM_ONE]: [
-    ExtendedEther.onChain(SupportedChainId.ARBITRUM_ONE),
-    WETH9_EXTENDED[SupportedChainId.ARBITRUM_ONE],
-  ],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend

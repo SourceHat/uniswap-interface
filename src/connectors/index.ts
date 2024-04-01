@@ -23,29 +23,29 @@ const NETWORK_URLS: {
   [chainId in SupportedChainId]: string
 } = {
   [SupportedChainId.MAINNET]: `https://mainnet.infura.io/v3/${INFURA_KEY}`,
-  [SupportedChainId.RINKEBY]: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
-  [SupportedChainId.ROPSTEN]: `https://ropsten.infura.io/v3/${INFURA_KEY}`,
-  [SupportedChainId.GOERLI]: `https://goerli.infura.io/v3/${INFURA_KEY}`,
-  [SupportedChainId.KOVAN]: `https://kovan.infura.io/v3/${INFURA_KEY}`,
-  [SupportedChainId.ARBITRUM_ONE]: `https://arb1.arbitrum.io/rpc`,
+  // [SupportedChainId.RINKEBY]: `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
+  // [SupportedChainId.ROPSTEN]: `https://ropsten.infura.io/v3/${INFURA_KEY}`,
+  // [SupportedChainId.GOERLI]: `https://goerli.infura.io/v3/${INFURA_KEY}`,
+  // [SupportedChainId.KOVAN]: `https://kovan.infura.io/v3/${INFURA_KEY}`,
+  // [SupportedChainId.ARBITRUM_ONE]: `https://arb1.arbitrum.io/rpc`,
   [SupportedChainId.SEPOLIA]: `https://sepolia.gateway.tenderly.co`,
   [SupportedChainId.BASE_SEPOLIA]: `https://sepolia.base.org`,
 }
 
 const SUPPORTED_CHAIN_IDS: SupportedChainId[] = [
   SupportedChainId.MAINNET,
-  SupportedChainId.KOVAN,
-  SupportedChainId.GOERLI,
-  SupportedChainId.RINKEBY,
-  SupportedChainId.ROPSTEN,
-  SupportedChainId.ARBITRUM_ONE,
+  // SupportedChainId.KOVAN,
+  // SupportedChainId.GOERLI,
+  // SupportedChainId.RINKEBY,
+  // SupportedChainId.ROPSTEN,
+  // SupportedChainId.ARBITRUM_ONE,
   SupportedChainId.SEPOLIA,
   SupportedChainId.BASE_SEPOLIA,
 ]
 
 export const network = new NetworkConnector({
   urls: NETWORK_URLS,
-  defaultChainId: 1,
+  defaultChainId: 11155111,
 })
 
 let networkLibrary: Web3Provider | undefined
@@ -79,7 +79,7 @@ export const portis = new PortisConnector({
 
 // mainnet only
 export const walletlink = new WalletLinkConnector({
-  url: NETWORK_URLS[1],
+  url: NETWORK_URLS[11155111],
   appName: 'Uniswap',
   appLogoUrl: UNISWAP_LOGO_URL,
 })

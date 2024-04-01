@@ -5,24 +5,8 @@ import { SupportedChainId } from './chains'
 
 type AddressMap = { [chainId: number]: string }
 
-// export const UNI_ADDRESS: AddressMap = constructSameAddressMap('0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', false)
-// export const MULTICALL2_ADDRESSES: AddressMap = {
-//   ...constructSameAddressMap('0x43cDB3cb3cD47727B0C25f01bcB27fa822668544', false),
-//   [SupportedChainId.ARBITRUM_ONE]: '0x021CeAC7e681dBCE9b5039d2535ED97590eB395c',
-// }
-// prettier-ignore
-// export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap('0x7E0987E5b3a30e3f2828572Bb659A548460a3003', false)
-// export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap(
-//   '0xC532a74256D3Db42D0Bf7a0400fEFDbad7694008',
-//   false
-// )
 export const UNI_ADDRESS: AddressMap = {
   [SupportedChainId.MAINNET]: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
-  [SupportedChainId.ROPSTEN]: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
-  [SupportedChainId.RINKEBY]: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
-  [SupportedChainId.GOERLI]: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
-  [SupportedChainId.KOVAN]: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
-  [SupportedChainId.ARBITRUM_ONE]: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984',
   [SupportedChainId.SEPOLIA]: '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984', 
   [SupportedChainId.BASE_SEPOLIA]: '0x3298e4a83fB1E7af3C557bE074e2992861aeEB04'}
 
@@ -61,9 +45,6 @@ export const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES: AddressMap = constructSameA
 )
 export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
   [SupportedChainId.MAINNET]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-  [SupportedChainId.ROPSTEN]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-  [SupportedChainId.GOERLI]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-  [SupportedChainId.RINKEBY]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
 }
 export const SOCKS_CONTROLLER_ADDRESSES: AddressMap = {
   [SupportedChainId.MAINNET]: '0x65770b5283117639760beA3F867b69b3697a91dd',
