@@ -1,0 +1,21 @@
+.banner {
+  text-align: center;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: calc(.50vw + 1vh);
+
+}
+
+.top {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+
+.bottom {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+  }
