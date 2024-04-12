@@ -2,6 +2,12 @@ import { SupportedChainId } from '../constants/chains'
 
 const ETHERSCAN_PREFIXES: { [chainId: number]: string } = {
   [SupportedChainId.MAINNET]: '',
+  [SupportedChainId.SEPOLIA]: 'sepolia.',
+  [SupportedChainId.BASE_SEPOLIA]: 'sepolia.',
+}
+
+const ETHERSCAN_DOMAINS: { [chainId: number]: string } = {
+  [SupportedChainId.BASE_SEPOLIA]: 'basescan.org',
 }
 
 export enum ExplorerDataType {
@@ -18,20 +24,8 @@ export enum ExplorerDataType {
  * @param type the type of the data
  */
 export function getExplorerLink(chainId: number, data: string, type: ExplorerDataType): string {
-  if (chainId === SupportedChainId.SEPOLIA) {
-    switch (type) {
-      case ExplorerDataType.TRANSACTION:
-        return `https://mainnet-arb-explorer.netlify.app/tx/${data}`
-      case ExplorerDataType.ADDRESS:
-        return `https://mainnet-arb-explorer.netlify.app/address/${data}`
-      case ExplorerDataType.BLOCK:
-        return `https://mainnet-arb-explorer.netlify.app/block/${data}`
-      default:
-        return `https://mainnet-arb-explorer.netlify.app`
-    }
-  }
 
-  const prefix = `https://${ETHERSCAN_PREFIXES[chainId] ?? ''}etherscan.io`
+  const prefix = `https://${ETHERSCAN_PREFIXES[chainId] ?? ''}${ETHERSCAN_DOMAINS[chainId] ?? 'etherscan.io'}`
 
   switch (type) {
     case ExplorerDataType.TRANSACTION:
